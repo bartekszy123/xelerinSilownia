@@ -1,0 +1,30 @@
+    .highlight {
+      position: absolute;
+      border: 2px solid red;
+      pointer-events: none;
+      z-index: 10;
+    }
+    #container {
+      position: relative;
+      display: inline-block;
+    }
+
+    .model{
+
+        background-color: aqua;
+    }
+
+    .prawe_ramie:hover{
+
+        scale: 1.5;
+        background-color: red;
+    }
+
+    .hoverBox {
+      position: absolute;
+      border: 2px solid blue;
+      background-color: rgba(0, 0, 255, 0.2);
+      pointer-events: none;
+      z-index: 10;
+      display: none;
+    }

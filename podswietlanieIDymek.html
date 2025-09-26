@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Mapa mięśni</title>
+  <style>
+    #container {
+      position: relative;
+      display: inline-block;
+    }
+
+    .hoverBox {
+      position: absolute;
+      border: 2px solid blue;
+      background-color: rgba(0, 0, 255, 0.2);
+      pointer-events: none;
+      z-index: 10;
+      display: none;
+    }
+
+    .tooltip {
+      position: absolute;
+      background-color: #fff;
+      border: 1px solid #333;
+      padding: 5px 10px;
+      font-size: 14px;
+      border-radius: 4px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      z-index: 20;
+      display: none;
+      white-space: nowrap;
+    }
+  </style>
+</head>
+<body>
+
+<div id="container">
+  <img src="model.jpg" usemap="#bodymap" id="bodyImage" alt="Model umięśniony">
+  <div id="hoverBox" class="hoverBox"></div>
+  <div id="tooltip" class="tooltip"></div>
+</div>
+
+<map name="bodymap">
+  <area shape="rect" coords="150,100,250,180" href="klatka.html" alt="Klatka piersiowa" 
+        onmouseover="showHover(150,100,250,180,'Klatka piersiowa')" onmouseout="hideHover()">
+  <area shape="rect" coords="150,180,250,260" href="brzuch.html" alt="Brzuch" 
+        onmouseover="showHover(150,180,250,260,'Mięśnie brzucha')" onmouseout="hideHover()">
+  <area shape="rect" coords="250,100,300,200" href="ramie_prawe.html" alt="Prawe ramię" 
+        onmouseover="showHover(250,100,300,200,'Prawe ramię')" onmouseout="hideHover()">
+  <area shape="rect" coords="100,100,150,200" href="ramie_lewe.html" alt="Lewe ramię" 
+        onmouseover="showHover(100,100,150,200,'Lewe ramię')" onmouseout="hideHover()">
+</map>
+
+<script>
+  function showHover(x1, y1, x2, y2, label) {
+    const box = document.getElementById('hoverBox');
+    const tooltip = document.getElementById('tooltip');
+
+    // Pokazanie podświetlenia
+    box.style.left = x1 + 'px';
+    box.style.top = y1 + 'px';
+    box.style.width = (x2 - x1) + 'px';
+    box.style.height = (y2 - y1) + 'px';
+    box.style.display = 'block';
+
+    // Pokazanie dymka
+    tooltip.textContent = label;
+    tooltip.style.left = (x2 + 10) + 'px'; // przesunięcie w prawo
+    tooltip.style.top = y1 + 'px';
+    tooltip.style.display = 'block';
+  }
+
+  function hideHover() {
+    document.getElementById('hoverBox').style.display = 'none';
+    document.getElementById('tooltip').style.display = 'none';
+  }
+</script>
+
+</body>
+</html>

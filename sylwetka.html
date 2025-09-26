@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Mapa mięśni</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="container">
+  <img src="model.jpg" usemap="#bodymap" id="bodyImage" alt="Model umięśniony" class="model">
+  <div id="hoverBox" class="hoverBox"></div>
+  <div id="highlightBox" class="highlight" style="display: none;"></div>
+</div>
+
+<map name="bodymap">
+  <area shape="rect"class="prawe_ramie" coords="190,786,250,180" href="klatka.html" alt="Klatka piersiowa" onclick="highlightArea(150,100,250,180)">
+  <area shape="rect" coords="150,180,250,260" href="brzuch.html" alt="Brzuch" onclick="highlightArea(150,180,250,260)">
+  <area shape="rect" coords="128,667,222,888" href="ramie_prawe.html" alt="Prawe ramię" onclick="highlightArea(250,100,300,200)">
+  <area shape="rect" coords="100,100,150,200" href="ramie_lewe.html" alt="Lewe ramię" onclick="highlightArea(100,100,150,200)">
+</map>
+
+
+
+</body>
+</html>
