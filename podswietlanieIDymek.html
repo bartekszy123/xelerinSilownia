@@ -22,7 +22,7 @@
       height: auto;
       margin: 15px;
       border: none;
-    background: none;
+      background: none;
     }
 
     .buttons{   
@@ -50,6 +50,9 @@
       pointer-events: none;
       z-index: 10;
       display: none;
+    
+    
+
     }
 
     .tooltip {
@@ -64,11 +67,15 @@
       display: none;
       white-space: nowrap;
     }
+
+
+
   </style>
 </head>
 <body>
-  <header> <div class="buttons">
-     
+  <header> 
+    <div class="buttons">
+      
         <a href="https://www.google.com/"><button class="home">home</button></a>
 
         <a href=""><button class="education">education</button></a>
@@ -79,7 +86,7 @@
 
         <a href="Bartosz_Szydełko_CV.pdf" target="_blank"><button class="cv">download CV</button></a>
 
-    </div>
+      </div>
   </header>
   
   
@@ -92,19 +99,23 @@
 
 <map name="bodymap">
   <area shape="rect" coords="370,518,730,750" href="klatka.html" alt="Klatka piersiowa" 
-        onmouseover="showHover(370,518,730,750,'Klatka piersiowa:trener <br> marek')" onmouseout="hideHover()">
+        onmouseover="showHover(370,518,730,750,'Klatka piersiowa:<br>najlepsze ćwiczenia: <br>-wyciskanie na ławce płaskiej <br> -pompki <br>-wyciskanie hantli')"
+         onmouseout="hideHover()">
   <area shape="rect" coords="438,806,650,1080" href="brzuch.html" alt="Brzuch" 
-        onmouseover="showHover(438,806,650,1080,'Mięśnie brzucha')" onmouseout="hideHover()">
+        onmouseover="showHover(438,806,650,1080,'Mięśnie brzucha: <br> najlepsze ćwiczenia: <br> -uginanie nóg na drążku <br> -plank/deska')" onmouseout="hideHover()">
   <area shape="rect" coords="132,660,206,900" href="ramie_prawe.html" alt="Prawe ramię" 
-        onmouseover="showHover(132,660,250,260,'Prawe ramię')" onmouseout="hideHover()">
-  <area shape="rect" coords="100,100,150,200" href="ramie_lewe.html" alt="Lewe ramię" 
-        onmouseover="showHover(100,100,150,200,'Lewe ramię')" onmouseout="hideHover()">
+        onmouseover="showHover(132,660,250,260,'ramiona: <br> najlepsze ćwiczenia: <br>-podciaganie <br> -uginanie ramion hantlami')" onmouseout="hideHover()">
+  <area shape="rect" coords="760,562,843,860" href="ramie_lewe.html" alt="Lewe ramię" 
+        onmouseover="showHover(760,562,843,860,'ramiona: <br> najlepsze ćwiczenia: <br>-podciaganie <br> -uginanie ramion hantlami')" onmouseout="hideHover()">
 </map>
 
 <script>
   function showHover(x1, y1, x2, y2, label) {
+    
     const box = document.getElementById('hoverBox');
-    const tooltip = document.getElementById('tooltip');
+    //const tooltip = document.getElementById('tooltip');
+
+    //element.innerHTML = tekst
 
     // Pokazanie podświetlenia
     box.style.left = x1 + 'px';
@@ -114,11 +125,14 @@
     box.style.display = 'block';
 
     // Pokazanie dymka
-    tooltip.textContent = label;
+
+    //tooltip.textContent = label +"test";
+    tooltip.innerHTML = label;
+    //label1="test '<br>' test";
     tooltip.style.left = (x2 + 10) + 'px'; // przesunięcie w prawo
     tooltip.style.top = y1 + 'px';
     tooltip.style.display = 'block';
-    
+
   }
 
   function hideHover() {
