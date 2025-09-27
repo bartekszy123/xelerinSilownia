@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nasi Trenerzy</title>
+    <style>
+        body {
+            margin: 0 auto;
+            color: #147ad3;
+            background-color: black;
+        }
+
+        #container {
+            display: flex;
+            flex-direction: column;
+            text-align: right;
+            padding: 20px;
+        }
+
+        #krzysiek, #ewa, #jan {
+            margin-bottom: 20px;
+            margin: 30px;
+        }
+
+        img {
+            width: 400px;
+        }
+
+button{        
+      color: #147ad3; 
+      width: auto;
+      height: auto;
+      margin: 15px;
+      border: none;
+      background: none;
+    }
+
+    .buttons{   
+      transform: scale(1.6);
+      margin-left: 800px;
+      display: block;
+      
+    }
+
+    .oNas:hover,.NasiTrenerzy:hover,.services:hover,.abilities:hover,.ZalogujSie:hover{
+      transform: scale(1.2);
+      transition: transform 0.4s;
+      color: #063864;
+      background: #2196f3;
+      box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+    }
+
+       .pakuj{
+
+     color: rgb(54, 44, 204);
+     font-size: 50px;
+     text-align: center;
+     display: block;
+     
+    }
+ footer{
+
+      text-align: center;
+      font-size: 20px;
+    }
+
+    </style>
+</head>
+<body>
+
+<div class="pakuj">Pakuj.pl</div>
+   
+    
+    <div class="buttons">
+      
+        <a href="podswietlanieIDymek.html"><button class="oNas">O nas</button></a>
+
+        <a href="nasiTrenerzy.html"target="_blank"><button class="NasiTrenerzy">Nasi trenerzy</button></a>
+    
+        <!-- <a href=""><button class="services">services</button></a> -->
+ 
+       <!-- <a href=""><button class="abilities">abilities</button></a> -->
+
+        <a href="ekranLogowania.html" target="_blank"><button class="ZalogujSie">Zaloguj się</button></a>
+
+      </div>
+
+
+    <div id="container">
+        <div id="krzysiek"><img src="images/krzysiek.png" alt="Krzysiek"></div>
+        <div id="ewa"><img src="images/ewa.png" alt="Ewa"></div>
+        <div id="jan"><img src="images/jan.png" alt="Jan"></div>
+    </div>
+    <footer>Pakuj.pl | all rights reserved</footer>
+</body>
+</html>
