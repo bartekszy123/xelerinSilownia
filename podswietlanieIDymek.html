@@ -5,15 +5,22 @@
   <title>xelerin_siłownia_Bartosz_Szydełko</title>
 
   <style>
+    html{
+
+    scroll-behavior: smooth;
+}
 
     body{
     
-      margin-left: 400px;
-      margin-right: 400px;
+      margin-left: auto;
+      margin-right: auto;
+      color: #147ad3;
+      background-color: black;
     }
     #container {
       position: relative;
       display: inline-block;
+      margin-left: 250px;
     }
 
     button{        
@@ -27,10 +34,12 @@
 
     .buttons{   
       transform: scale(1.6);
-      margin-left: 200px;
+      margin-left: 750px;
+      display: block;
+      
     }
 
-    .home:hover,.education:hover,.services:hover,.abilities:hover,.cv:hover{
+    .oNas:hover,.NasiTrenerzy:hover,.services:hover,.abilities:hover,.ZalogujSie:hover{
       transform: scale(1.2);
       transition: transform 0.4s;
       color: #063864;
@@ -68,26 +77,57 @@
       white-space: nowrap;
     }
 
+    .pakuj{
+
+     color: rgb(54, 44, 204);
+     font-size: 50px;
+     text-align: center;
+     display: block;
+     
+    }
+
+    #oNas{
+
+      font-size: 20px;
+      text-align: left;
+      margin-left: 20px;
+    }
+
 
 
   </style>
 </head>
 <body>
-  <header> 
+  <div class="pakuj">Pakuj.pl</div>
+   
+    
     <div class="buttons">
       
-        <a href="https://www.google.com/"><button class="home">home</button></a>
+        <a href="https://www.google.com/"><button class="oNas">O nas</button></a>
 
-        <a href=""><button class="education">education</button></a>
+        <a href=""><button class="NasiTrenerzy">Nasi trenerzy</button></a>
     
-        <a href=""><button class="services">services</button></a>
+        <!-- <a href=""><button class="services">services</button></a> -->
  
-        <a href=""><button class="abilities">abilities</button></a>
+       <!-- <a href=""><button class="abilities">abilities</button></a> -->
 
-        <a href="Bartosz_Szydełko_CV.pdf" target="_blank"><button class="cv">download CV</button></a>
+        <a href="" target="_blank"><button class="ZalogujSie">Zaloguj się</button></a>
 
       </div>
-  </header>
+
+      <div id="oNas">
+
+        <h1>O nas:</h1>
+      <ul>Jesteśmy siłownią z ponad 20 letnim stażem.</ul>
+      <ul>Zajmujemy się głównie przygotowaniem sportowców do zawodów sportowych</ul>
+      <ul>Nasza strona internetowa zawiera modela, na którym po najechaniu na konretną</ul>
+      <ul>część ciała myszką pojawi się komunikat z najskuteczniejszymi ćwiczeniami na daną 
+        partię ciała. 
+      </ul>
+      
+      
+      </div>
+  
   
   
 
@@ -140,6 +180,6 @@
     document.getElementById('tooltip').style.display = 'none';
   }
 </script>
-
+<a href="#" class="strzalkaTop"><img src="images/up_arrow.png" alt="" style="position:fixed; right: 0;top:90%;width: 70px;"></a>
 </body>
 </html>
