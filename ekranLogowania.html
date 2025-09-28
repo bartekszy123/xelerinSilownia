@@ -6,14 +6,10 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> 
   <style>
     body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, black);
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      margin-left: auto;
+      margin-right: auto;
+      color: #147ad3;
+      background-color: black;
     }
 
     .login-container {
@@ -22,6 +18,15 @@
       border-radius: 10px;
       box-shadow: 0 8px 16px rgba(0,0,0,0.2);
       width: 320px;
+      height: 320px;
+       /* margin-top: 200px;  */
+      align-items: center;
+      margin-left: 450px;
+      margin-top: 100px;
+      /* padding-right: 100x; */
+      
+
+      
     }
 
     .login-container h2 {
@@ -101,9 +106,73 @@
     }
 
 
+    button{        
+      color: #147ad3; 
+      width: auto;
+      height: auto;
+      margin: 15px;
+      border: none;
+      background: none;
+    }
+
+    .buttons{   
+      transform: scale(1.6);
+      text-align: center;
+      /* position: fixed; */
+      display: inline-block;
+      /* margin-top: 100px; */
+      margin-left: 500px;
+      
+    }
+
+    .oNas:hover,.NasiTrenerzy:hover,.services:hover,.abilities:hover,.ZalogujSie:hover{
+      transform: scale(1.2);
+      transition: transform 0.4s;
+      color: #063864;
+      background: #2196f3;
+      box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+    }
+
+
+
+    .pakuj{
+        width: 100px;
+        /* height: 100px; */
+        /* margin-bottom: 600px; */
+        /* text-align: center; */
+         margin-left: 600px; 
+
+        color: rgb(54, 44, 204);
+        font-size: 50px;
+        display: block;
+     
+    }
+
   </style>
 </head>
 <body>
+
+<div class="pakuj">Pakuj.pl</div>
+
+<div class="buttons">
+      
+        <a href="podswietlanieIDymek.html"><button class="oNas">O nas</button></a>
+
+        <a href="nasiTrenerzy.html"><button class="NasiTrenerzy">Nasi trenerzy</button></a>
+    
+        <!-- <a href=""><button class="services">services</button></a> -->
+ 
+       <!-- <a href=""><button class="abilities">abilities</button></a> -->
+
+        <a href="ekranLogowania.html" ><button class="ZalogujSie">Zaloguj się</button></a>
+
+      </div>
+
   <div class="login-container">
     <h2>Logowanie</h2>
     <div class="input-group">
