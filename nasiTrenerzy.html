@@ -11,24 +11,29 @@
         }
 
         body {
-            margin: 0 auto;
-            color: #147ad3;
+            margin-left: auto;
+            margin-right: auto;
+            color: #147ad3; 
             background-color: black;
         }
 
-        #container {
+         #container {
+            width: 100%;
             display: flex;
             flex-direction: column;
             text-align: right;
             padding: 20px;
+            align-items: right;
             
-        }
+        } 
 
         #krzysiek, #ewa, #jan {
             margin-bottom: 20px;
             margin: 30px;
             width: 600px;
-            margin-left: 400px;
+            font-size: 40px;
+            margin-left: 500px;
+            
         }
 
         #krzysiekTekst{
@@ -39,7 +44,9 @@
         img {
             width: 400px;
             transition: 1.5s;
-            text-align: right;
+            /* text-align: right; */
+            float: right;
+            
             
         }
 
@@ -101,6 +108,11 @@
       font-size: 20px;
     }
 
+    .test{
+
+        display: block;
+    }
+
     </style>
 </head>
 <body>
@@ -122,16 +134,20 @@
 
       </div>
 
+      
     
 
-    <div id="container">
+     <div id="container"> 
         
-       <div>nfenjdenjfjn</div>
+       <div id="test">nfenjdenjfjn</div>
 
-        <div id="krzysiek"><div id="krzysiekTekst">krzysiek</div> <img src="images/krzysiek.png" alt="Krzysiek"></div>
+        <div id="krzysiek"><img src="images/krzysiek.png" alt="Krzysiek"></div>
         <div id="ewa"><img src="images/ewa.png" alt="Ewa"></div>
         <div id="jan"><img src="images/jan.png" alt="Jan"></div>
-    </div>
+     </div> 
+
+     <a href="#" class="strzalkaTop"><img src="images/up_arrow.png" alt="" style="position:fixed; right: 0;top:90%;width: 70px;"></a>
+
     <footer>Pakuj.pl | all rights reserved</footer>
 </body>
 </html>
