@@ -1,65 +1,76 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nasi Trenerzy</title>
-    <style>
+    <title>nasiTrenerzy</title>
+</head>
 
-        html{
-             scroll-behavior: smooth;
-        }
+</html>
 
-        body {
-            margin-left: auto;
-            margin-right: auto;
-            color: #147ad3; 
-            background-color: black;
-        }
+<style>
 
-         #container {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            text-align: right;
-            padding: 20px;
-            align-items: right;
-            
-        } 
+    html{
+     scroll-behavior: smooth;
+    }
+ 
+    body {
+    width: 500px;
+    height: auto;
+     margin-left: auto;
+     margin-right: auto;
+     color: #147ad3; 
+     background-color: black;
+    }
 
-        #krzysiek, #ewa, #jan {
-            margin-bottom: 20px;
-            margin: 30px;
-            width: 600px;
-            font-size: 40px;
-            margin-left: 500px;
-            
-        }
+    .trainer {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 30px 0;
+        gap: 40px;
+        width: 800px;
+        
+    }
 
-        #krzysiekTekst{
 
-            display: block;
-        }
+    .trainer img {
+        width: 400px;
+        transition: 1.5s;
+    }
 
-        img {
-            width: 400px;
-            transition: 1.5s;
-            /* text-align: right; */
-            float: right;
-            
-            
-        }
 
-        img:hover{
-
+    
+    img:hover{
             transform: scale(1.11);
             box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
-
-            
+            transition: 1.1s;
             
         }
 
-    button{        
+    .trainer img:hover {
+        transform: scale(1.11);
+        box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+        
+    }
+
+    .trainer-text {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-size: 30px;
+        color: #147ad3;
+        
+    }
+
+    .trainer-text div {
+        background-color: #111;
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+ button{        
       color: #147ad3; 
       width: auto;
       height: auto;
@@ -108,14 +119,16 @@
       font-size: 20px;
     }
 
-    .test{
+.container{
 
-        display: block;
-    }
+    /* margin: 20px; */
+}    
 
-    </style>
-</head>
+</style>
+
 <body>
+    
+
 
 <div class="pakuj">Pakuj.pl</div>
    
@@ -134,20 +147,50 @@
 
       </div>
 
-      
-    
+<div id="container">
+    <div class="trainer">
+        <a href="ekranLogowania.html" target="_blank"><img src="images/krzysiek.png" alt="Krzysiek"></a>
+        <div class="trainer-text">
+           <div>trener Kzysiek: 
+           <ul>specjalizuje się w treningu kalistenicznym</ul>
+           <ul>treningi:</ul>
+           <ul>8:00-16:00 poniedziałek-piątek</ul>
+           <ul>zapisy na stronie</ul>
+            </div>
+           
+        </div>
+    </div>
 
-     <div id="container"> 
-        
-       <div id="test">nfenjdenjfjn</div>
+    <div class="trainer">
+        <a href="ekranLogowania.html" target="_blank"><img src="images/ewa.png" alt="Ewa"></a>
+        <div class="trainer-text">
+            <div>
+                trenerka Ewa:
+                <ul>specjalizuje się w treningu CrossFit</ul>
+                <ul>treningi:</ul>
+                <ul>10:00-20:00</ul>
+                <ul>środa-czwartek</ul>
+                <ul>zapisy na stronie</ul>
+            
+            </div>
+            
+        </div>
+    </div>
 
-        <div id="krzysiek"><img src="images/krzysiek.png" alt="Krzysiek"></div>
-        <div id="ewa"><img src="images/ewa.png" alt="Ewa"></div>
-        <div id="jan"><img src="images/jan.png" alt="Jan"></div>
-     </div> 
-
-     <a href="#" class="strzalkaTop"><img src="images/up_arrow.png" alt="" style="position:fixed; right: 0;top:90%;width: 70px;"></a>
-
-    <footer>Pakuj.pl | all rights reserved</footer>
+    <div class="trainer">
+        <a href="ekranLogowania.html" target="_blank"><img src="images/jan.png" alt="Jan"></a>
+        <div class="trainer-text">
+            <div>trener Jan:
+                <ul>specjalizuje się w treningu kulturystycznym</ul>
+                <ul>treningi:</ul>
+                <ul>7:00-15:00</ul>
+                <ul>piątek-niedziela</ul>
+                <ul>zapisy na stronie</ul>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<a href="#" class="strzalkaTop"><img src="images/up_arrow.png" alt="" style="position:fixed; right: 0;top:90%;width: 70px;"></a>
+<footer>Pakuj.pl | all Rights Reserved</footer>
 </body>
-</html>
